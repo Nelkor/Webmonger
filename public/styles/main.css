@@ -1,0 +1,25 @@
+/* Стили демонтрационной страницы */
+body {
+    background-size: cover;
+    background: url('/public/images/sky.jpg') fixed center;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0004;
+}
+
+@media (max-width: 768px) {
+    h1 {font-size: 2.5rem;}
+    p {font-size: 1.2rem;}
+}
+
+@media (min-width: 769px) {
+    h1 {font-size: 6rem;}
+    p {font-size: 2rem;}
+}
