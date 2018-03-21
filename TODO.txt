@@ -1,0 +1,1 @@
+1. В routes добавлен массив path. Необходимо при подготовке не-ajax ответа рендерить все view, указанные в path: wrapper -> foreach path -> content.
