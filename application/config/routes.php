@@ -2,7 +2,7 @@
 
 return [
     '' => [
-        'path' => '',
+        'path' => [],
         'controller' => 'main',
         'action' => 'main',
         'access' => [],
