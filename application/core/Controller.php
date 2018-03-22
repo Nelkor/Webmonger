@@ -48,12 +48,11 @@ abstract class Controller
         $this->session = Session::handle();
     }
 
-    public function __invoke(string $action, array $access, string $request)
+    public function __invoke(string $action, int $access, string $request)
     {
-        $rights = explode(',', $this->session->get_str('login_rights'));
+        $rights = $this->session->get_int('login_rights');
 
-        // access роута будет выражено одним числом. Пользователя - битовой маской.
-        if ( ! $access || array_intersect($rights, $access)) {
+        if ( ! $access || ($rights & $access)) {
             $this->request = $request;
 
             $this->$action();
