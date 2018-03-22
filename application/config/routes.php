@@ -2,10 +2,9 @@
 
 return [
     '' => [
-        'path' => [],
         'controller' => 'main',
         'action' => 'main',
-        'access' => [],
+        'access' => [], // сделать числом. Один роут - одно действие. И для него одно право доступа.
         'ajax-only' => false
     ]
 ];
