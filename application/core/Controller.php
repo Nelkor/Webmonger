@@ -52,6 +52,7 @@ abstract class Controller
     {
         $rights = explode(',', $this->session->get_str('login_rights'));
 
+        // access роута будет выражено одним числом. Пользователя - битовой маской.
         if ( ! $access || array_intersect($rights, $access)) {
             $this->request = $request;
 
