@@ -4,7 +4,7 @@ return [
     '' => [
         'controller' => 'main',
         'action' => 'main',
-        'access' => [], // сделать числом. Один роут - одно действие. И для него одно право доступа.
+        'access' => 0,
         'ajax-only' => false
     ]
 ];
