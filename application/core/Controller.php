@@ -52,7 +52,7 @@ abstract class Controller
     {
         $rights = $this->session->get_int('login_rights');
 
-        if ( ! $access || ($rights & $access == $access)) {
+        if ( ! $access || ($rights & $access == $access)) { // TODO проверить
             $this->request = $request;
 
             $this->$action();
