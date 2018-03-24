@@ -1,8 +1,8 @@
 <?php
 
-class View
+class Output
 {
-    public static function render(string $file_name, array $args = [])
+    public static function html(string $file_name, array $args = [])
     {
         ob_start();
 
@@ -15,10 +15,6 @@ class View
 
     public static function error(string $code)
     {
-        /*
-        
-        */
-        
         switch ($code) {
             case '404':
                 header('HTTP/1.0 404 Not Found');
@@ -34,7 +30,7 @@ class View
         exit;
     }
 
-    public static function response(string $status, array $content = [])
+    public static function json(string $status, array $content = [])
     {
         echo json_encode([
             'response' => $status,
@@ -42,5 +38,15 @@ class View
         ]);
 
         exit;
+    }
+
+    public static function file(string $file_name, string $type)
+    {
+        header("Content-Type: $type");
+        header('Expires: 0');
+        header('Cache-Control: must-revalidate');
+        header('Pragma: public');
+
+        readfile($file_name);
     }
 }
