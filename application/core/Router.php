@@ -1,6 +1,6 @@
 <?php
 
-require_once 'application/core/View.php';
+require_once 'application/core/Output.php';
 
 class Router
 {
@@ -29,6 +29,6 @@ class Router
             }
         }
 
-        View::error('404');
+        Output::error('404');
     }
 }
