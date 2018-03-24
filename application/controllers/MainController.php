@@ -4,8 +4,13 @@ class MainController extends Controller
 {
     public function mainAction()
     {
-        $page = View::render('main');
+        $page = Output::html('main');
 
         $this->respond($page);
+    }
+
+    public function infoAction()
+    {
+        phpinfo();
     }
 }
