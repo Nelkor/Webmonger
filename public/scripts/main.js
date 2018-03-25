@@ -6,7 +6,7 @@ $(function () {
         if (data.response == 'ok' && data.content) {
             receiver.html(data.content.html);
 
-            history.pushState(null, null, data.content.url);
+            history.pushState(null, null, '/' + data.content.url);
         }
     };
 
