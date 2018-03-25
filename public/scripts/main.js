@@ -23,8 +23,6 @@ $(function () {
     .on('click', '.load', function () {
         var button = $(this);
 
-        button.addClass('btn-warning');
-
         var receiver = $('#' + button.data('receiver'));
         var sender = button.data('sender');
 
@@ -36,14 +34,6 @@ $(function () {
 
         $.get('/' + sender, 'ajax', function (data) {
             load(data, receiver);
-
-            button.removeClass('btn-warning');
-
-            if (button.hasClass('task')) {
-                $('.task').addClass('btn-primary').removeClass('btn-success');
-
-                button.addClass('btn-success').removeClass('btn-primary');
-            }
 
             load_time = 0;
         }, 'json');
