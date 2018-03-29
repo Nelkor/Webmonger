@@ -6,7 +6,7 @@ require_once 'application/classes/Cache.php';
 abstract class Controller
 {
     protected $session;
-    protected $request;
+    protected $request; // а реквест не лишний, случайно? Проверить
     protected $cache;
 
     protected function loadModel(string $name)
