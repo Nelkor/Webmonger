@@ -1,25 +1,44 @@
-/* Стили демонтрационной страницы */
 body {
-    background-size: cover;
-    background: url('/public/images/sky.jpg') fixed center;
+    min-height: 100vh;
+    background: url(/public/images/bg.png);
+}
+
+#main {
+    flex-grow: 1;
+}
+
+#columns > div {
+    padding: 5px;
+}
+
+.glass {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background-color: #fffa;
+}
+
+/* nav */
+nav {
+    margin-bottom: 5px;
+}
+
+nav span {
+    cursor: pointer;
+}
+
+nav, footer {
+    background-color: #210a;
+}
+
+/* footer */
+footer {
+    margin-top: 5px;
     color: #fff;
 }
 
-.container {
-    display: flex;
-    height: 100vh;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: #0004;
-}
-
-@media (max-width: 768px) {
-    h1 {font-size: 2.5rem;}
-    p {font-size: 1.2rem;}
-}
-
-@media (min-width: 769px) {
-    h1 {font-size: 6rem;}
-    p {font-size: 2rem;}
+/* АВТОРИЗАЦИЯ */
+#btn-auth, #btn-reg, #btn-leave {
+    background-color: #210a;
+    color: #fff;
 }

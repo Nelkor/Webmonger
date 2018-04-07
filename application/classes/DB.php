@@ -2,7 +2,7 @@
 
 class DB
 {
-    protected static $pdo;
+    private static $pdo;
 
     public function __construct()
     {

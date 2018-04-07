@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => '',
-    'user' => '',
-    'password' => ''
+    'name' => 'webmonger',
+    'user' => 'monger',
+    'password' => 'web'
 ];
