@@ -18,6 +18,7 @@ $router->run('path');
 А в обработчике, например, так:
 
 $.post('/api/auth?ajax', {name: name, pass: pass}, function (data) {
+
     load(data, $('#main'));
 
     if (data.response == 'denied') {
