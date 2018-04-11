@@ -11,7 +11,7 @@ class Router
         if (array_key_exists($request, $routes)) {
             $route = $routes[$request];
 
-            $controller = ucfirst($route['controller']) . 'Controller';
+            $controller = ucfirst($route['controller']) . 'Controller'; // если правильно писать контроллеры в путях, ucfirst не нужен
             $action = $route['action'] . 'Action';
 
             $path = "application/controllers/$controller.php";
