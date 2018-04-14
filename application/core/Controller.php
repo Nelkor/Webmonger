@@ -22,7 +22,7 @@ abstract class Controller
         return $result;
     }
 
-    protected function respond(string $page)
+    protected function respond(string $page) // возможно, добавить необязательный параметр, из которого будут формироваться гет-параметры к реквесту
     {
         if (filter_has_var(INPUT_GET, 'ajax')) {
             Output::json('ok', [
