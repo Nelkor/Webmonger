@@ -15,14 +15,26 @@ class Output
 
     public static function error(string $code)
     {
+        if (filter_has_var(INPUT_GET, 'ajax')) {
+            self::json('error', ['code' => $code]);
+        }
+
         switch ($code) {
+            case '400':
+                header('HTTP/1.1 400 Bad Request');
+                header('Status: 400 Bad Request');
+                break;
             case '404':
-                header('HTTP/1.0 404 Not Found');
+                header('HTTP/1.1 404 Not Found');
                 header('Status: 404 Not Found');
                 break;
             case '403':
-                header('HTTP/1.0 403 Forbidden');
+                header('HTTP/1.1 403 Forbidden');
                 header('Status: 403 Forbidden');
+                break;
+            case '500':
+                header('HTTP/1.1 500 Internal Server Error');
+                header('Status: 500 Internal Server Error');
                 break;
         }
 
