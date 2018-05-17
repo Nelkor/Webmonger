@@ -1,5 +1,5 @@
 $(function () {
-    var load_time = 0;
+    var load_time = 0; // подумать насчет функции, которая проверяет + устанавливает load_time и возвращает boolean
 
     // Валидация и обработка объекта с html и url
     var load = function (data, receiver) {
