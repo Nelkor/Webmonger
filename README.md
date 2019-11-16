@@ -1,3 +1,3 @@
 # Webmonger
 
-apt-get install php7.0 php7.0-fpm php7.0-mb php7.0-mysql php-memcached
+apt install php7.2 php7.2-fpm php7.2-mb php7.2-mysql php-memcached
